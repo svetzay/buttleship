@@ -3,7 +3,7 @@ var model = {
 	numShips: 3,
 	shipLength: 3,
 	shipsSunk: 0,
-
+	
 	ships: [
 		{ locations: [0, 0, 0], hits: ["", "", ""] },
 		{ locations: [0, 0, 0], hits: ["", "", ""] },
@@ -101,8 +101,8 @@ var model = {
 		}
 		return false;
 	}
-
-};
+	
+}; 
 
 
 var view = {
@@ -121,7 +121,7 @@ var view = {
 		cell.setAttribute("class", "miss");
 	}
 
-};
+}; 
 
 var controller = {
 	guesses: 0,
@@ -150,7 +150,7 @@ function parseGuess(guess) {
 		var firstChar = guess.charAt(0);
 		var row = alphabet.indexOf(firstChar);
 		var column = guess.charAt(1);
-
+		
 		if (isNaN(row) || isNaN(column)) {
 			alert("Oops, that isn't on the board.");
 		} else if (row < 0 || row >= model.boardSize ||
@@ -205,6 +205,7 @@ function init() {
 	// place the ships on the game board
 	model.generateShipLocations();
 }
+
 
 
 
